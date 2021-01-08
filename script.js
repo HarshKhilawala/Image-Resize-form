@@ -5,7 +5,7 @@ function resizeImage(){
 	output = document.querySelector("#output");
     reader = new FileReader();
     
-    console.log(file);
+    // console.log(file);
 
     var toWidth = document.getElementById("width");
     toWidth = parseInt(toWidth.value);
@@ -59,12 +59,11 @@ function resizeImage(){
 
         var dataurl = canvas.toDataURL("image/png");
         output.src = dataurl;
-        document.querySelector("input[type=file]").files[0].src = dataurl
-	  }, false);
-
+        document.querySelector("input[type=file]").files[0].src = dataurl;
+    }, false);
+    
     reader.readAsDataURL(file);
-    console.log(document.querySelector("input[type=file]").files[0]);
-
+    // console.log(document.querySelector("input[type=file]").files[0]);
 
 }
 
